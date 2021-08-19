@@ -1,0 +1,67 @@
+
+--- [START 2021-06-16_14-33-25] ----------------------------------------------------------------
+
+	@common.py:  
+	pytorch
+		seed = 1623825205
+		torch.__version__                  = 1.7.1+cu101
+		torch.version.cuda                 = 10.1
+		torch.backends.cudnn.version()     = 7603
+		torch.cuda.device_count()          = 1
+		os['CUDA_VISIBLE_DEVICES']         = 5
+		torch.cuda.get_device_properties() = (name='GeForce GTX 1080 Ti', major=6, minor=1, total_memory=11178MB, multi_processor_count=28)
+		torch.cuda.device_count()          = 1
+
+
+	__file__ = 1_train_title.py
+	out_dir  = /home/data_normal/abiz/wuzhiqiang/wzq/shopee/code_v3/result/text/0616/margin_0.6/fold-0
+
+root = /home/data_normal/abiz/wuzhiqiang/wzq/data/shopee-product-matching
+train_dataset : 
+	len     = 27399
+	label   = 8811
+
+
+** net setting **
+train num of classes: 8811
+margin: 0.6
+dynamic margin: False
+	initial_checkpoint = /home/data_normal/abiz/wuzhiqiang/wzq/shopee/code_v3/result/text/0615/fold-0/checkpoint/00050000_model.pth
+
+optimizer
+  Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 1e-06
+    weight_decay: 0
+)
+
+** start training here **
+   batch_size = 16
+   experiment = ['1_train_title.py']
+                               |----- VALID -----|----- TRAIN/BATCH -----
+rate     margin   iter   epoch | loss    acc     |  loss0  | time        
+-------------------------------------------------------------------------
+0.00000  0.60000   5.00* 29.19  |  0.000   0.000  |  0.000  |  0 hr 00 min
+0.00000  0.60000   5.05  29.48  |  0.000   0.000  |  0.456  |  0 hr 01 min
+0.00000  0.60000   5.10  29.77  |  0.000   0.000  |  0.433  |  0 hr 03 min
+0.00000  0.60000   5.15  30.06  |  0.000   0.000  |  0.390  |  0 hr 05 min
+0.00000  0.60000   5.20* 30.36  |  0.000   0.000  |  0.371  |  0 hr 07 min
+0.00000  0.60000   5.25  30.65  |  0.000   0.000  |  0.388  |  0 hr 10 min
+0.00000  0.60000   5.30  30.94  |  0.000   0.000  |  0.424  |  0 hr 12 min
+0.00000  0.60000   5.35  31.23  |  0.000   0.000  |  0.466  |  0 hr 14 min
+0.00000  0.60000   5.40* 31.52  |  0.000   0.000  |  0.342  |  0 hr 16 min
+0.00000  0.60000   5.45  31.82  |  0.000   0.000  |  0.284  |  0 hr 18 min
+0.00000  0.60000   5.50  32.11  |  0.000   0.000  |  0.344  |  0 hr 20 min
+0.00000  0.60000   5.55  32.40  |  0.000   0.000  |  0.305  |  0 hr 22 min
+0.00000  0.60000   5.60* 32.69  |  0.000   0.000  |  0.340  |  0 hr 24 min
+0.00000  0.60000   5.65  32.98  |  0.000   0.000  |  0.267  |  0 hr 26 min
+0.00000  0.60000   5.70  33.27  |  0.000   0.000  |  0.365  |  0 hr 28 min
+0.00000  0.60000   5.75  33.57  |  0.000   0.000  |  0.294  |  0 hr 30 min
+0.00000  0.60000   5.80* 33.86  |  0.000   0.000  |  0.269  |  0 hr 32 min
+0.00000  0.60000   5.85  34.15  |  0.000   0.000  |  0.329  |  0 hr 34 min
+0.00000  0.60000   5.90  34.44  |  0.000   0.000  |  0.289  |  0 hr 36 min
+0.00000  0.60000   5.95  34.73  |  0.000   0.000  |  0.282  |  0 hr 38 min
+0.00000  0.60000   6.00* 35.03  |  0.000   0.000  |  0.329  |  0 hr 40 min

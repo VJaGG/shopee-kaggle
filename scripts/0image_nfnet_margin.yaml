@@ -1,0 +1,13 @@
+initial_checkpoint: "/home/data_normal/abiz/wuzhiqiang/wzq/shopee/code_v3/result/image/0608/nfnet_margin/fold-0/checkpoint/00070000_model.pth"
+optimizer: 'adam'
+weight_decay: 0.00001
+start_lr: 0.000001
+scheduler: null
+arch: 'eca_nfnet_l1_margin'
+margin: 0.8
+dynamic_margin: false
+layer: false
+
+fold: 0
+batch_size: 6
+out_dir: '/home/data_normal/abiz/wuzhiqiang/wzq/shopee/code_v3/result/image/0608/nfnet_margin/'

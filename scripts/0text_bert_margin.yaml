@@ -1,0 +1,14 @@
+initial_checkpoint: '/home/data_normal/abiz/wuzhiqiang/wzq/shopee/code_v3/result/text/0615/fold-0/checkpoint/00050000_model.pth'
+
+optimizer: 'adam'
+weight_decay: 0.00001
+start_lr: 0.000001
+scheduler: null
+arch: 'bert_margin'
+margin: 0.6
+dynamic_margin: false
+layer: false
+
+fold: 0
+batch_size: 16
+out_dir: '/home/data_normal/abiz/wuzhiqiang/wzq/shopee/code_v3/result/text/0616/margin_0.6/'
